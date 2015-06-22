@@ -1,0 +1,10 @@
+﻿<Window x:Class="InternetStoreDBase.OutOfStock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OutOfStock" Height="313" Width="625">
+    <Grid Margin="0,0,86,39">
+        <DataGrid x:Name="dataGridStock" HorizontalAlignment="Left" Margin="62,75,-22,0" VerticalAlignment="Top" Height="159" Width="491"/>
+        <Label Content="Заканчивающиеся альбомы:" HorizontalAlignment="Left" Margin="216,33,0,0" VerticalAlignment="Top" Width="179"/>
+
+    </Grid>
+</Window>

@@ -1,17 +1,22 @@
 ﻿<Window x:Class="InternetStoreDBase.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="База данных магазина" Height="406.315" Width="622.368">
+        Title="База данных магазина" Height="459.315" Width="622.368">
     <Grid Margin="0,0,2,12">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="51*"/>
             <ColumnDefinition Width="211*"/>
             <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="309*"/>
+            <ColumnDefinition Width="236*"/>
+            <ColumnDefinition Width="73*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Margin="36.737,29,0,0" VerticalAlignment="Top" Height="170" Width="440" Grid.ColumnSpan="3" Grid.Column="1"/>
-        <Button x:Name="btnOrders" Content="Посмотреть заказы" HorizontalAlignment="Left" Margin="47,238,0,0" VerticalAlignment="Top" Width="143" Height="64" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnAddOrder" Content="Добавить заказ" HorizontalAlignment="Left" Margin="203,260,0,0" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="3" Grid.Column="1" Height="42"/>
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="40,41,0,0" VerticalAlignment="Top" Height="182" Width="530" Grid.ColumnSpan="5"/>
+        <Button x:Name="btnOrders" Content="Посмотреть заказы" HorizontalAlignment="Left" Margin="40,312,0,0" VerticalAlignment="Top" Width="143" Height="42" Click="btnOrders_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSaveChanges" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="137,245,0,0" VerticalAlignment="Top" Width="211" Grid.Column="1" Height="42" Click="btnSaveChanges_Click" Grid.ColumnSpan="3"/>
+        <Label Content="Альбомы в наличии:" Grid.Column="1" HorizontalAlignment="Left" Margin="186,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="134"/>
+        <Button x:Name="btnOutOfStock" Grid.ColumnSpan="3" Content="Заканчивающиеся" HorizontalAlignment="Left" Margin="177,312,0,0" VerticalAlignment="Top" Width="144" Height="42" Grid.Column="1" Click="btnOutOfStock_Click"/>
+        <Button x:Name="btnStats" Content="Статистика" HorizontalAlignment="Left" Margin="123,312,0,0" VerticalAlignment="Top" Width="144" Height="42" Grid.Column="3" Grid.ColumnSpan="2" Click="btnStats_Click"/>
+        <Label Content="Бейсенов Бахтияр 273" Grid.Column="1" HorizontalAlignment="Left" Margin="177,381,0,0" VerticalAlignment="Top" Width="144" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>
