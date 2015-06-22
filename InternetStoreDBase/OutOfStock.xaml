@@ -2,9 +2,23 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="OutOfStock" Height="313" Width="625">
-    <Grid Margin="0,0,86,39">
-        <DataGrid x:Name="dataGridStock" HorizontalAlignment="Left" Margin="62,75,-22,0" VerticalAlignment="Top" Height="159" Width="491"/>
-        <Label Content="Заканчивающиеся альбомы:" HorizontalAlignment="Left" Margin="216,33,0,0" VerticalAlignment="Top" Width="179"/>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Close"/>
+                <MenuItem Header="_Save"/>
+            </MenuItem>
+        </Menu>
+        <Grid Margin="0,0,86,39">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="446*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="dataGridStock" HorizontalAlignment="Left" Margin="57,75,-22,-11" VerticalAlignment="Top" Height="159" Width="491" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Label Content="Заканчивающиеся альбомы:" HorizontalAlignment="Left" Margin="131,33,0,0" VerticalAlignment="Top" Width="179" Grid.Column="2"/>
 
-    </Grid>
+        </Grid>
+    </DockPanel>
 </Window>
